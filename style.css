@@ -1,0 +1,30 @@
+/* Contenedor flexible para la foto */
+.profile-img-container {
+    width: 200px;       /* Ancho máximo inicial */
+    max-width: 30%;     /* Máximo 30% del contenedor padre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imagen de perfil responsiva y proporcional */
+.profile-img {
+    width: 100%;        /* Se ajusta al ancho del contenedor */
+    height: auto;       /* Mantiene proporción original */
+    border-radius: 50%;
+    border: 5px solid #003366;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover */
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+/* Ajuste en móvil */
+@media (max-width: 768px) {
+    .profile-img-container {
+        max-width: 50%;   /* Se achica más en móvil */
+        margin: 0 auto;
+    }
+}
